@@ -10,6 +10,6 @@
             SecurityNote
         </a>
     </h1>
-    <a href="{{route('notes.create')}}" style="text-decoration: none; background-color: green; padding: 8px 6px; border-radius: 8px; color: inherit ">Add Note</a>
+    <a href="{{route('notes.create')}}" style="text-decoration: none; background-color: orange; padding: 8px 6px; border-radius: 8px; color: inherit ">Add Note</a>
 
 </nav>
