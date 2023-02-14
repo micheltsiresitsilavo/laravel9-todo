@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>SecurityNote</h1>
-    <a href="{{route('notes.create')}}">Add Note</a>
-    <hr>
-    <ul>
-        @foreach ($notes as $note)
-            <li>{{$note->note}} <a href="{{route('notes.show', $note)}}">Read more</a></li>
+@extends('layout.app')
+
+@section('content')
+   
+    <div style="margin-top: 25px; ">
+
+        {{-- <ul style="list-style: none">
+            @foreach ($notes as $note)
+                <li>{{$note->note}} <a href="{{route('notes.show', $note)}}">Read more</a></li>
+            @endforeach
+        </ul> --}}
+        
+            @foreach ($notes as $note)
+            <div style=" background-color:rgb(51, 41, 41); color: white; padding: 25px; margin: 10px 0; display: flex; flex-direction:column ">
+                {{$note->note}} <a href="{{route('notes.show', $note)}}">Read more</a>
+            </div>
         @endforeach
-    </ul>
-</body>
-</html>
+    </div>
+@endsection
