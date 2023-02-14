@@ -19,4 +19,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [NoteController::class, 'index']);
+Route::get('/', [NoteController::class, 'index'])->name('notes.home');
+Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
+Route::post('/notes/create', [NoteController::class, 'store'])->name('notes.store');
+Route::get('/notes/{note}', [NoteController::class, 'show'])->name('notes.show');
+Route::get('/notes/edit/{note}', [NoteController::class, 'edit'])->name('notes.edit');
+Route::put('/notes/{note}/update', [NoteController::class, 'update'])->name('notes.update');

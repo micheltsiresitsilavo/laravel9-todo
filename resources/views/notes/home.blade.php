@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>SecurityNote</h1>
+    <a href="{{route('notes.create')}}">Add Note</a>
+    <hr>
+    <ul>
+        @foreach ($notes as $note)
+            <li>{{$note->note}} <a href="{{route('notes.show', $note)}}">Read more</a></li>
+        @endforeach
+    </ul>
 </body>
 </html>
