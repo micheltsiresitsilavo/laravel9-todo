@@ -19,6 +19,7 @@
             background-color: rgba(121, 241, 121, 0.829);
             color: white;
             padding: 20px;
+            
            
         }
 
@@ -38,8 +39,11 @@
 
         }
 
+        
+
         .note, .edit_note {
             margin-bottom: 15px;
+            font-size: 1.5em
         
         }
 
@@ -73,6 +77,7 @@
     <main>      
         @include('partials.nav')
         @yield('content')
+        @include('partials.footer')
     </main>
 </body>
 </html>
