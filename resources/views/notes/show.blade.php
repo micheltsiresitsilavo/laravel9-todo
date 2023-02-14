@@ -16,9 +16,13 @@
 
     <p>{{$note->note}}</p>
 
-    <div style="margin-bottom: 20px">
+    <div style="margin-bottom: 20px; display: flex">
         <a href="{{route('notes.edit', $note)}}">Edit</a> | 
-        <a href="">Delete</a>
+        <form action="{{route('notes.destroy', $note)}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button type="submit">Delete</button>
+        </form>
     </div>
     <a href="/">Retour to home</a>
 </body>
