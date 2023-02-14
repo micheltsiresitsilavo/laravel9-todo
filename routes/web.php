@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,14 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [NoteController::class, 'index'])->name('notes.home');
-Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
-Route::post('/notes/create', [NoteController::class, 'store'])->name('notes.store');
-Route::get('/notes/{note}', [NoteController::class, 'show'])->name('notes.show');
-Route::get('/notes/edit/{note}', [NoteController::class, 'edit'])->name('notes.edit');
-Route::put('/notes/update/{note}', [NoteController::class, 'update'])->name('notes.update');
-Route::delete('/notes/delete/{note}', [NoteController::class, 'destroy'])->name('notes.destroy');
+Route::get('/',[TodoController::class, 'index'])->name('todos.home');
+Route::post('todos/create', [TodoController::class, 'store'])->name('todos.store');
+Route::get('todos/{todo}', [TodoController::class, 'edit'])->name('todos.edit');
+Route::put('todos/{todo}', [TodoController::class, 'update'])->name('todos.update');
+Route::delete('todos/{todo}', [TodoController::class, 'destroy'])->name('todos.destroy');
