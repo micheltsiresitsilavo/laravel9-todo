@@ -12,6 +12,11 @@
 
     <hr>
     <p style="margin-top: 25px">{{$note->note}}</p>
+    <div style="margin-top: 15px">
+        <p  style=" 
+        font-size: 0.9em;
+        padding: 2px 1px; font-weight:bold">Le {{$note->created_at->format('y-m-d, h:m:s')}} </p>
+    </div>
     <div style="margin:20px 0; display: flex">
         <a href="{{route('notes.edit', $note)}}">Edit</a> | 
         <form action="{{route('notes.destroy', $note)}}" method="POST">

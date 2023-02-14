@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
         nav{
             display: flex;
@@ -59,6 +60,12 @@
             margin-top: -6px
 
         }
+        .minima {
+            font-style: italic; 
+            font-size: 0.9em;
+            background-color: orange;
+            padding: 2px 1px
+        }
 
     </style>
 </head>
@@ -69,3 +76,4 @@
     </main>
 </body>
 </html>
+

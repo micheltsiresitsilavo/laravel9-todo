@@ -5,10 +5,10 @@
 
     <h1 class="edit_note">Note edit</h1>
     @if ($errors->any())
-    <div style="background-color: rgba(243, 20, 20, 0.658); max-width: 50%; display: flex; align-items: center;padding:15px; margin: 15px 0">
+    <div style="background-color: rgba(243, 20, 20, 0.658);border-radius:8px; max-width: 50%; display: flex; align-items: center;padding:15px; margin: 15px 0">
         <ul style="list-style: none">
             @foreach ($errors->all() as $error)
-                <li style="color:rgba(243, 9, 9, 0.849)">{{$error}}</li>
+                <li style="color:rgba(243, 9, 9, 0.849); font-weight:bold">{{$error}}</li>
             @endforeach
         </ul>
     </div>
